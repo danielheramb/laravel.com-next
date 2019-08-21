@@ -14,6 +14,10 @@ Route::get('docs/{version}/{page?}', 'DocsController@show');
 Route::get('partners', 'PartnersController@index');
 Route::get('partner/{partner}', 'PartnersController@show');
 
+Route::get('certification', function () {
+    return redirect('//certification.laravel.com');
+});
+
 Route::get('/', function () {
     return view('marketing');
 });
